@@ -1,21 +1,27 @@
-package com.arcade.platform.controller.imdb;
+package com.movieApp.controller;
 
-import com.arcade.platform.service.api.IMDBApiService;
+import com.movieApp.service.IMDBApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController(value = "/imdb")
 public class IMBDApiController {
 
-    @Autowired
-    IMDBApiService iMDBApiService;
+    IMDBApiService imdbApiService;
 
-    @GetMapping("/search")
-    public ResponseEntity<IMBDResponseDTO> search() {
-        return ResponseEntity.status(HttpStatus.OK).body(iMDBApiService.search());
+    @GetMapping("/search/{content}")
+    public ResponseEntity<IMBDResponseDTO> search(@PathVariable(value = "content") String content) {
+        return ResponseEntity.status(HttpStatus.OK).body(imdbApiService.searchRequest(content));
     }
+
+    @Autowired
+    public void setImdbApiService(IMDBApiService imdbApiService) {
+        this.imdbApiService = imdbApiService;
+    }
+
 
 }

@@ -1,15 +1,15 @@
-package com.arcade.platform.controller.imdb;
+package com.movieApp.controller;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class IMDBNameDTO {
 
     @JsonProperty("title")
-    String title;
+    public String title;
 
     @JsonProperty("image")
-    String image;
+    public String image;
 
     @JsonProperty("id")
-    String id;
+    public String id;
 }
