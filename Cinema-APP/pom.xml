@@ -8,11 +8,11 @@
 		<version>2.2.7.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.Movie-app</groupId>
-	<artifactId>Movie-App</artifactId>
+	<groupId>com.microservice</groupId>
+	<artifactId>Cinema-APP</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MovieApp</name>
-	<description>Movie App Project</description>
+	<name>Cinema-APP</name>
+	<description>Cinema App Project</description>
 
 	<properties>
 		<java.version>8</java.version>

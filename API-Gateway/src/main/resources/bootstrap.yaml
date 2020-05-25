@@ -1,6 +1,14 @@
 zuul:
   routes:
-    product:
-      path: /movie/**
+    cinema:
+      path: /cinema/**
       url: http://localhost:8100
       stripPrefix: true
+    travel:
+      path: /travel/**
+        url: http://localhost:8400
+        stripPrefix: true
+    analytics:
+      path: /analytics/**
+        url: http://localhost:8200
+        stripPrefix: true

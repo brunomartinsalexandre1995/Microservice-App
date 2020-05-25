@@ -8,11 +8,11 @@
 		<version>2.2.7.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.App-Gateway</groupId>
-	<artifactId>App-Gateway</artifactId>
+	<groupId>com.microservice</groupId>
+	<artifactId>Api-Gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Gateway</name>
-	<description>Api gateway project</description>
+	<name>Api-Gateway</name>
+	<description>Api Gateway project</description>
 
 	<properties>
 		<java.version>1.8</java.version>

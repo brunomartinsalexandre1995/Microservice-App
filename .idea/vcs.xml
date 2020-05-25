@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/App-Ui/restrace" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Web-UI/restrace" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/router-project/restrace" vcs="Git" />
   </component>
 </project>
