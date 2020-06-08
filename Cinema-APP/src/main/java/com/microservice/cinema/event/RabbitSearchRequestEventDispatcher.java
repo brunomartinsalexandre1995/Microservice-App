@@ -5,6 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+/**
+ * RabbitMQ Search Event Dispatcher Class for the Cinema APP
+ *
+ * @author bruno.martins.alexandre.1995@gmail.com
+ * @version 1.0.0
+ */
 @Component
 public class RabbitSearchRequestEventDispatcher {
 
@@ -14,15 +20,19 @@ public class RabbitSearchRequestEventDispatcher {
 
     @Autowired
     RabbitSearchRequestEventDispatcher(final RabbitTemplate rabbitTemplate,
-                                       @Value("${search.request.exchange}") final String searchExchange,
-                                       @Value("${search.request.key}") final String searchRoutingKey) {
+                                       @Value("${rabbit.search.exchange}") final String searchExchange,
+                                       @Value("${rabbit.search.key}") final String searchRoutingKey) {
         this.rabbitTemplate = rabbitTemplate;
         this.searchExchange = searchExchange;
         this.searchRoutingKey = searchRoutingKey;
     }
 
     public void send(final SearchRequestEvent searchRequestEvent) {
-        rabbitTemplate.convertAndSend(searchExchange, searchRoutingKey, searchRequestEvent);
+        try {
+            rabbitTemplate.convertAndSend(searchExchange, searchRoutingKey, searchRequestEvent);
+        }catch(Exception ex){
+            //TODO Do nothing for now
+        }
     }
 
 }

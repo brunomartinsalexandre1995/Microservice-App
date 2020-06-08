@@ -8,6 +8,12 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
+/**
+ * Search Event class for the Cinema APP
+ *
+ * @author bruno.martins.alexandre.1995@gmail.com
+ * @version 1.0.0
+ */
 @RequiredArgsConstructor
 @Getter
 @EqualsAndHashCode

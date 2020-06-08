@@ -1,0 +1,47 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    container_name: db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    expose:
+      - 5434
+    ports:
+      - 5434:5432
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=brunodb
+    restart: unless-stopped
+    networks:
+      - mynet
+  springbootapp:
+    image: brunoalex95/cinema-microservice:latest
+    container_name: cinema-app-springboot
+    expose:
+      - 8100
+    ports:
+      - 8100:8100
+    restart: unless-stopped
+    depends_on:
+      - db
+      - redis
+    links:
+      - db
+    networks:
+      - mynet
+  redis:
+    image: redis
+    expose:
+      - 6380
+    ports:
+      - 6380:6379
+    networks:
+      - mynet
+volumes:
+  postgres-data:
+networks:
+  mynet:
+    external:
+      name: mynet

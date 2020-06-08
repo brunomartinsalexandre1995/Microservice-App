@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="soccer" />
+        <module name="Dervice-Discovery" />
         <module name="Api-Gateway" />
         <module name="Cinema-APP" />
         <module name="analytics-app" />
@@ -15,12 +15,14 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="maven-archiver" target="1.5" />
+      <module name="soccer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Api-Gateway" options="-parameters" />
       <module name="Cinema-APP" options="-parameters" />
+      <module name="Dervice-Discovery" options="-parameters" />
       <module name="Travel-app" options="-parameters" />
       <module name="analytics-app" options="-parameters" />
       <module name="soccer" options="-parameters" />

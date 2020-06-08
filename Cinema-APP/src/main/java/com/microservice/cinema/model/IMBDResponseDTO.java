@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * RabbitMQ Configuration Class for the Cinema APP
+ * IMDB API response Class for the Cinema APP
  *
  * @author bruno.martins.alexandre.1995@gmail.com
  * @version 1.0.0

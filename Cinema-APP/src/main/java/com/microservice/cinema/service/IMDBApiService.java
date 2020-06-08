@@ -6,6 +6,7 @@ import com.microservice.cinema.event.RabbitSearchRequestEventDispatcher;
 import com.microservice.cinema.persistence.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +32,7 @@ public class IMDBApiService {
 
     private RabbitSearchRequestEventDispatcher rabbitSearchRequestEventDispatcher;
 
+    @Cacheable(cacheNames = "iMDBSearchCache", key = "#content")
     public IMBDResponseDTO searchRequest(String content) {
         HttpEntity requestEntity = createHttpRequestEntity();
         ResponseEntity<IMBDResponseDTO> response = restTemplateBuilder.build().exchange(

@@ -1,14 +1,24 @@
 zuul:
+  ignoredServices: '*'
+  prefix: /api
   routes:
     cinema:
       path: /cinema/**
-      url: http://localhost:8100
+      serviceId: cinema
       stripPrefix: true
     travel:
       path: /travel/**
-        url: http://localhost:8400
-        stripPrefix: true
+      serviceId: travel
+      stripPrefix: true
     analytics:
       path: /analytics/**
-        url: http://localhost:8200
-        stripPrefix: true
+      serviceId: analytics
+      stripPrefix: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:8761/eureka
+
+endpoints:
+  routes:
+    sensitive: false

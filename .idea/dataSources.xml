@@ -7,5 +7,17 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/brunodb</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="postgres@Docker-Database" uuid="90037080-f57e-467e-9591-9155b40fb171">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5434/postgres</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="postgres@aws" uuid="8dd45ed4-e189-4c61-99a8-d3892d276996">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://bruno-freetier-database.cxfffssex00m.us-east-2.rds.amazonaws.com:5432/postgres</jdbc-url>
+    </data-source>
   </component>
 </project>
