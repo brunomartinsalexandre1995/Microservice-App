@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/API-Gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Analytics-APP" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cinema-APP" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Soccer-APP" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Travel-APP" charset="UTF-8" />
+  </component>
+</project>
