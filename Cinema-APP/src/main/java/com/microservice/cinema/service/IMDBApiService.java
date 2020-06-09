@@ -28,8 +28,6 @@ public class IMDBApiService {
 
     private RestTemplateBuilder restTemplateBuilder;
     private IMDBRequestRepository imdbRequestRepository;
-
-
     private RabbitSearchRequestEventDispatcher rabbitSearchRequestEventDispatcher;
 
     @Cacheable(cacheNames = "iMDBSearchCache", key = "#content")

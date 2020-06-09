@@ -10,6 +10,7 @@
 3. docker service create --replicas 1 --name eureka-service -p 8761:8761 --network mynet brunoalex95/service-registry-eureka\
 4. docker stack deploy --compose-file docker-compose.yml cinema-app\
 5. docker service create --replicas 1 --name api-gateway -p 8090:8090 --network mynet api-gateway\
+6. docker service create --replicas 1 --name app-analytics -p 8200:8200 --network mynet brunoalex95/analytics\
 \
 \
 \

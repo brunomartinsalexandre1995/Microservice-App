@@ -15,7 +15,7 @@ public class TravelController {
 
     private TravelService hotelsService;
 
-    @GetMapping("hotel/search")
+    @GetMapping("travel/search")
     public ResponseEntity<HotelSearchDTO> search(@PathParam(value = "location") String query) throws Exception {
         return ResponseEntity.status(HttpStatus.OK).body(hotelsService.searchRequest(query));
     }
